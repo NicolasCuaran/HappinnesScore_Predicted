@@ -13,22 +13,6 @@ El proyecto **HappinessScore_Predicted** implementa un pipeline de datos para pr
 - Procesar datos en tiempo real mediante Kafka.
 - Almacenar predicciones en PostgreSQL y evaluar el modelo con métricas y visualizaciones.
 
-La documentación detallada está disponible en [Documentación](Documents/Documentacion_WorkShop3_Actualizada.md).
-
-## Estructura del Repositorio
-
-```
-HappinessScore_Predicted/
-├── data/                     # Archivos CSV del World Happiness Report (2015–2019)
-├── model/                    # Modelo serializado (rf_model.pkl)
-├── Documents/                # Documentación del proyecto
-│   └── Documentacion_WorkShop3_Actualizada.md
-├── env/                      # Archivo de variables de entorno (.env)
-├── consumer.py               # Script consumidor de Kafka para predicción y almacenamiento
-├── producer.py               # Script productor de Kafka para streaming de datos
-├── docker-compose.yml        # Configuración de Docker para Kafka y ZooKeeper
-└── README.md                 # Descripción general e instrucciones de configuración
-```
 
 ## Herramientas y Tecnologías
 
@@ -47,7 +31,7 @@ El pipeline utiliza las siguientes herramientas y librerías:
   - **python-dotenv**: Gestión de variables de entorno.
   - **joblib**: Serialización de modelos.
 
-Consulta `requirements.txt` (generado durante la configuración) para la lista completa.
+Consulta `requirements.txt` para la lista completa.
 
 ## Metodología
 
@@ -79,7 +63,7 @@ Consulta `requirements.txt` (generado durante la configuración) para la lista c
 ### Instalación
 1. **Clonar el Repositorio**:
    ```bash
-   git clone https://github.com/<tu-usuario>/HappinessScore_Predicted.git
+   git clone https://github.com/NicolasCuaran/HappinnesScore_Predicted.git
    cd HappinessScore_Predicted
    ```
 2. **Configurar Variables de Entorno**:
@@ -96,12 +80,11 @@ Consulta `requirements.txt` (generado durante la configuración) para la lista c
    - Crea y activa un entorno virtual:
      ```bash
      python -m venv venv
-     source venv/bin/activate  # En Windows: venv\Scripts\activate
+     source venv/bin/activate   En Windows: venv\Scripts\activate
      ```
-   - Instala las dependencias (crea `requirements.txt` si no existe):
+   - Instala las dependencias :
      ```bash
-     pip install pandas scikit-learn matplotlib seaborn plotly kafka-python-ng country-converter sqlalchemy psycopg2-binary python-dotenv joblib
-     pip freeze > requirements.txt
+     pip install requirements.txt
      ```
 4. **Iniciar Kafka y ZooKeeper**:
    - Ejecuta la configuración de Docker Compose:
