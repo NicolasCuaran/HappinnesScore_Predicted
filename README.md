@@ -107,7 +107,7 @@ Consulta `requirements.txt` para la lista completa.
    - Conéctate a tu base de datos PostgreSQL y consulta la tabla `whr_predictions` para ver las predicciones, incluyendo `happiness_score` y `predicted_happiness_score`.
 
 ### Notas
-- Asegúrate de que el archivo `model/rf_model.pkl` exista o reentrena el modelo (script de entrenamiento no incluido).
+- Asegúrate de que el archivo `model/rf_model.pkl` exista o reentrena el modelo en el notebook se puede entrenar pero necesitas crear la carpeta Model.
 - El pipeline asume que los archivos CSV están en `data/`. Ajusta las rutas en `producer.py` si es necesario.
 - Detén los servicios de Docker con `docker compose down` al finalizar.
 
